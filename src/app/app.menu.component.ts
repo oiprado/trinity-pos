@@ -55,6 +55,12 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
+                label: 'Invoiving', icon: 'fa fa-fw fa-sitemap', badge: '2', badgeStyleClass: 'orange-badge', routerLink: ['/invoicing'],
+                items: [
+                    {label: 'Pos', icon: 'fa fa-fw fa-columns', routerLink: ['/components/sample']}
+                ]
+            },
+            {
                 label: 'Components', icon: 'fa fa-fw fa-sitemap', badge: '2', badgeStyleClass: 'orange-badge', routerLink: ['/components'],
                 items: [
                     {label: 'Sample Page', icon: 'fa fa-fw fa-columns', routerLink: ['/components/sample']},
