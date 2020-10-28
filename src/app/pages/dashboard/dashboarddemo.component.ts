@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-// import {CarService} from './shareservices/carservice';
-// import {EventService} from '../service/eventservice';
-// import {Car} from '/share/model/car';
 import {SelectItem} from 'primeng/primeng';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';

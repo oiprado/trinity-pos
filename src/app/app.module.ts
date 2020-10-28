@@ -93,9 +93,12 @@ import {NodeService} from './share/services/nodeservice';
 
 // Application services
 import {MenuService} from './app.menu.service';
+import { PosComponent } from './pages/invoicing/pos/pos.component';
+import { ComponentsModule } from './share/components/components.module';
 
 @NgModule({
     imports: [
+        ComponentsModule,
         BrowserModule,
         FormsModule,
         AppRoutes,
@@ -175,7 +178,8 @@ import {MenuService} from './app.menu.service';
         AppFooterComponent,
         AppSideBarTabContentComponent,
         AppSideBarComponent,
-        DashboardDemoComponent
+        DashboardDemoComponent,
+        PosComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

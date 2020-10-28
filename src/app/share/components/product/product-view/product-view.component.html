@@ -1,0 +1,50 @@
+<!-- <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+    <ng-template let-car pTemplate="item">
+        <span>#{{car.category}}</span>
+    </ng-template>
+</p-carousel> --> 
+<div class="card">
+    <p-dataView #dv [value]="products" layout = "grid">
+        <p-header>
+            <button icon="fa fa-search" pButton style="width:2em; float: right;" (click) = "onFilter()"></button>
+            <input type="text" pInputText placeholder="Search by brand" [(ngModel)]="wordFilter" style="float:right;">
+            <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+        </p-header>
+        <p-footer>
+            <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+        </p-footer>
+        <ng-template let-product pTemplate="listItem">
+            <div>
+                #{{product.code}}
+                {{product.name}}
+                <!-- {{product.price | currency}} -->
+            </div>
+        </ng-template>
+        <ng-template let-product pTemplate="gridItem">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-1.jpg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-2.jpg">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{ product.name }}</a></h3>
+                    <div class="price">$16.00
+                        <span>{{ product.price | currency }}</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft" let-state>
+            {{state.first}}
+            <button type="button" pButton icon="pi-refresh"></button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <button type="button" pButton icon="pi-cloud-upload"></button>
+        </ng-template>
+    </p-dataView>
+</div>
